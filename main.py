@@ -93,8 +93,7 @@ def main(folder: Path):
     for folder in parser.FOLDERS[::-1]:
         handle_folder(folder)
 
-
-if __name__ == '__main__':
+def run_sort():
     try:
         folder_for_scan = Path(sys.argv[1])
     except IndexError:
@@ -102,6 +101,11 @@ if __name__ == '__main__':
     else:    
         print(f'Start in folder {folder_for_scan.resolve()}')
         main(folder_for_scan.resolve())
+
+
+if __name__ == '__main__':
+    run_sort()
+
 
 
 # TODO: run:  python main.py `name_folder`
