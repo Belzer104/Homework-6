@@ -109,7 +109,10 @@ def run_sort():
 
 if __name__ == '__main__':
 
-    run_sort()
+    try:        
+        run_sort()
+    except FileNotFoundError:
+        print(f"Directory not found, try again")
 
 
 
